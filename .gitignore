@@ -1,0 +1,56 @@
+# Dependencies
+/rust/target/
+/.dart_tool/
+/.packages
+.packages
+pubspec.lock
+
+# Flutter build outputs
+/build/
+*.aab
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+AGENTS.md
+
+# macOS
+.DS_Store
+*.xcuserstate
+*.xcworkspace
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Android bugreports
+bugreport*.zip
+
+# Generated files
+*.freezed.dart
+*.g.dart
+# EXCEPTION: Hive adapters are manually created (hive_generator incompatible with freezed 3.x)
+!lib/src/core/storage/models/*.g.dart
+lib/src/rust/frb_generated.io.dart
+lib/src/rust/frb_generated.web.dart
+
+# Rust
+/rust/Cargo.lock
+
+# Secrets
+*.env
+*.env.*
+secrets/
+
+# Prebuilt native libraries (rebuild with ./android.sh)
+# These MUST be rebuilt when Rust code changes to avoid content hash mismatch
+android/app/src/main/jniLibs/
+.hive_adapters_backup/

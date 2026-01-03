@@ -1,0 +1,4 @@
+module koriumFFI {
+    header "koriumFFI.h"
+    export *
+}
