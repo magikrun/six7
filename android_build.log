@@ -1,0 +1,149 @@
+🔧 Six7 Android Build Script
+============================
+📦 Version: 1.0.2 (build 3)
+
+🎨 Step 0: Generating app icons from SVG...
+✅ App icons generated from SVG
+
+🦀 Step 1: Building Korium native library...
+   Korium version: 0.4.13
+   Using NDK: 28.2.13676358
+   Building for aarch64-linux-android...
+    Blocking waiting for file lock on build directory
+    Finished `release` profile [optimized] target(s) in 12.78s
+✅ Korium 0.4.13 built and copied (with closeStream fix)
+
+📦 Step 2: Checking korium UniFFI bindings...
+✅ korium.kt found
+✅ Native library found: libkorium.so
+-rwxr-xr-x@ 1 flavioaiello  staff    10M 17 Jan. 18:54 /Users/flavioaiello/git/six7chat/six7/android/app/src/main/jniLibs/arm64-v8a/libkorium.so
+
+📱 Step 3: Building Flutter APK...
+Deleting build...                                                1’445ms
+Deleting .dart_tool...                                               0ms
+Deleting ephemeral...                                                0ms
+Deleting Generated.xcconfig...                                       0ms
+Deleting flutter_export_environment.sh...                            0ms
+Deleting ephemeral...                                                0ms
+Deleting .flutter-plugins-dependencies...                            0ms
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 91.0.0 (93.0.0 available)
+  analyzer 8.4.1 (10.0.1 available)
+  characters 1.4.0 (1.4.1 available)
+  code_assets 0.19.10 (1.0.0 available)
+  dart_style 3.1.3 (3.1.4 available)
+  freezed 3.2.3 (3.2.4 available)
+  hooks 0.20.5 (1.0.0 available)
+  json_serializable 6.11.2 (6.11.4 available)
+  matcher 0.12.17 (0.12.18 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  meta 1.17.0 (1.18.0 available)
+  native_toolchain_c 0.17.2 (0.17.4 available)
+  source_helper 1.3.8 (1.3.10 available)
+  test 1.26.3 (1.29.0 available)
+  test_api 0.7.7 (0.7.9 available)
+  test_core 0.6.12 (0.6.15 available)
+  timezone 0.10.1 (0.11.0 available)
+Got dependencies!
+17 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleRelease'...                        
+Expected to find fonts for (packages/cupertino_icons/CupertinoIcons, MaterialIcons), but found (MaterialIcons). This usually means you are referring to font families in an IconData class but not including them in the assets section of your pubspec.yaml, are missing the package that would include them, or are missing "uses-material-design: true".
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 13984 bytes (99.2% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Running Gradle task 'assembleRelease'...                          108.2s
+✓ Built build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk (30.5MB)
+✓ Built build/app/outputs/flutter-apk/app-arm64-v8a-release.apk (39.4MB)
+✓ Built build/app/outputs/flutter-apk/app-x86_64-release.apk (43.3MB)
+
+📁 Step 3: Copying to release folder...
+Running Gradle task 'assembleRelease'...                        
+Expected to find fonts for (packages/cupertino_icons/CupertinoIcons, MaterialIcons), but found (MaterialIcons). This usually means you are referring to font families in an IconData class but not including them in the assets section of your pubspec.yaml, are missing the package that would include them, or are missing "uses-material-design: true".
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 13984 bytes (99.2% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Running Gradle task 'assembleRelease'...                           22.3s
+✓ Built build/app/outputs/flutter-apk/app-release.apk (106.7MB)
+
+✅ Build complete! APKs are in the release/ folder:
+total 429304
+drwxr-xr-x@  6 flavioaiello  staff        192 17 Jan. 18:56 .
+drwxr-xr-x  27 flavioaiello  staff        864 17 Jan. 18:54 ..
+-rw-r--r--@  1 flavioaiello  staff   39350976 17 Jan. 18:56 six7-v1.0.2-arm64-v8a.apk
+-rw-r--r--@  1 flavioaiello  staff   30485818 17 Jan. 18:56 six7-v1.0.2-armeabi-v7a.apk
+-rw-r--r--@  1 flavioaiello  staff   43266741 17 Jan. 18:56 six7-v1.0.2-x86_64.apk
+-rw-r--r--@  1 flavioaiello  staff  106690641 17 Jan. 18:56 six7-v1.0.2.apk
+radleKotlinCompilerWork.kt:111)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.io.IOException: Could not delete '/Users/flavioaiello/git/six7chat/six7/build/mobile_scanner/kotlin/compileReleaseKotlin/cacheable/caches-jvm'
+	at org.jetbrains.kotlin.incremental.FileUtilsKt.deleteRecursivelyOrThrow(fileUtils.kt:47)
+	at org.jetbrains.kotlin.incremental.FileUtilsKt.deleteDirectoryContents(fileUtils.kt:38)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.cleanOrCreateDirectories(IncrementalCompilerRunner.kt:321)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:290)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:128)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:684)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:94)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1810)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	... 3 more
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':flutter_plugin_android_lifecycle:mergeReleaseResources'.
+> Cannot access output property 'blameLogOutputFolder' of task ':flutter_plugin_android_lifecycle:mergeReleaseResources'. Accessing unreadable inputs or outputs is not supported. Declare the task as untracked by using Task.doNotTrackState(). For more information, please refer to https://docs.gradle.org/8.14/userguide/incremental_build.html#sec:disable-state-tracking in the Gradle documentation.
+   > java.nio.file.NoSuchFileException: /Users/flavioaiello/git/six7chat/six7/build/flutter_plugin_android_lifecycle/intermediates/merged_res_blame_folder/release/mergeReleaseResources/out/single/anim-v21.json
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 8s
+Running Gradle task 'assembleRelease'...                           69.1s
+Gradle task assembleRelease failed with exit code 1
