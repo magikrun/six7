@@ -1,0 +1,11 @@
+rust_input: crate::api
+rust_root: rust/
+rust_output: rust/src/frb_generated.rs
+dart_output: lib/src/rust/
+
+# Enable extra features
+full_dep: true
+local: true
+
+# Enable async
+default_dart_async: true
